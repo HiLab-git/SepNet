@@ -1,0 +1,32 @@
+[data]
+data_root             = /lyc/MICCAI-19-StructSeg/HaN_OAR_center_crop
+img_name              = crop_data_multi_thresh_2.nii.gz
+label_name            = crop_label.nii.gz
+seg_name              = subseg_3.nii.gz
+label_exist_name      = label_exist.npy
+batch_size            = 4
+class_num             = 23
+random_scale          = False
+random_rotate         = False
+subdata_shape         = [2, 120, 120]
+test_data_shape       = [2, 256, 256]
+output_feature        = False
+overlap_num           = 8
+
+[network]
+net_type                = Unet_Separate_3
+net_name                = Unet_Separate_3
+base_feature_number     = 24
+compress_feature_number = 4
+drop_rate               = 0.5
+with_bn                 = False
+depth                   = False
+dilation                = 1
+slice_margin            = 3
+class_num               = 23
+input_channel           = 1
+
+
+[testing]
+load_weight        = True
+model_path         = weights_center_crop/multi_thresh_2/Unet_Separate_3/Unet_Separate_3_24_atmexp_0.5_0.799.pkl

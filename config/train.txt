@@ -1,0 +1,51 @@
+[data]
+net_mode              = Pnet
+data_root             = /lyc/Head-Neck/MICCAI-19-StructSeg/HaN_OAR_center_crop
+img_name              = crop_data_multi_thresh_1.nii.gz
+label_name            = crop_label.nii.gz
+label_exist_name      = label_exist.npy
+batch_size            = 4
+random_scale          = False
+random_rotate         = False
+subdata_shape         = [16, 120, 120]
+sublabel_shape        = [16, 120, 120]
+test_data_shape       = [16, 256, 256]
+test_label_shape      = [16, 256, 256]
+label_convert_source  = [0, 1, 2, 3, 4]
+label_convert_target  = [0, 1, 1, 1, 1]
+zoom                  = False
+zoom_factor           = [0, 1, 1]
+class_num             = 23
+K_folder              = 5
+I_folder              = 1
+output_feature        = False
+overlap_num           = 8
+
+[network]
+net_type                = Unet_Separate_3
+net_name                = Unet_Separate_3
+base_feature_number     = 24
+compress_feature_number = 4
+drop_rate               = 0.5
+dilation                = 1
+with_bn                 = False
+depth                   = False
+slice_margin            = 3
+class_num               = 23
+input_channel           = 1
+
+
+[training]
+load_weight        = False
+model_path         = weights_center_crop/multi_thresh_1/Unet_Separate_4/Unet_Separate_4_24_ath_exp_0.5_0.785.pkl
+learning_rate      = 1e-3
+decay              = 1e-8
+maximal_epoch      = 400
+snapshot_epoch     = 10
+start_iteration    = 0
+train_step         = 100
+test_step          = 100
+print_step         = 10
+model_pre_trained  = 
+model_save_prefix  = weights_center_crop/multi_thresh_1/Unet_Separate_3/Unet_Separate_3_24_ath_exp_0.5_sag
+best_dice          = 0.74
