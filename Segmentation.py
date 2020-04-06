@@ -6,15 +6,7 @@ import torch.tensor
 from models.LYC_data_loader import LYC_dataset
 from util.train_test_func import *
 from util.parse_config import parse_config
-from models.Unet_Separate_2 import Unet_Separate_2
-from models.Unet_Separate_3 import Unet_Separate_3
-from models.Unet_Separate_4 import Unet_Separate_4
-from models.UnetSE_Separate_3 import UnetSE_Separate_3
-from models.UnetDense_Separate_3 import UnetDense_Separate_3
-from models.UnetDense_Separate_4 import UnetDense_Separate_4
-from models.UnetDense_Separate_5 import UnetDense_Separate_5
 from models.Unet import Unet
-from models.SOLNet import SOLNet
 from models.Unet_Separate import Unet_Separate
 from util.binary import assd, dc
 from data_process.data_process_func import save_array_as_nifty_volume
@@ -23,35 +15,12 @@ from util.assd_evaluation import one_hot
 class NetFactory(object):
     @staticmethod
     def create(name):
-        if name == 'Unet_Separate_2':
-            return Unet_Separate_2
-
         if name == 'Unet':
             return Unet
 
         if name == 'Unet_Separate':
             return Unet_Separate
 
-        if name == 'Unet_Separate_3':
-            return Unet_Separate_3
-
-        if name == 'Unet_Separate_4':
-            return Unet_Separate_4
-
-        if name == 'UnetSE_Separate_3':
-            return UnetSE_Separate_3
-
-        if name == 'SOLNet':
-            return SOLNet
-
-        if name == 'UnetDense_Separate_3':
-            return UnetDense_Separate_3
-
-        if name == 'UnetDense_Separate_4':
-            return UnetDense_Separate_4
-
-        if name == 'UnetDense_Separate_5':
-            return UnetDense_Separate_5
         # add your own networks here
         print('unsupported network:', name)
         exit()
