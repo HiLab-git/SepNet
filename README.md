@@ -8,7 +8,7 @@ Nasopharyngeal Carcinoma (NPC) is a leading form of Head-and-Neck (HAN) cancer i
 Pytorch >= 1.4, SimpleITK >= 1.2, scipy >= 1.3.1, nibabel >= 2.5.0 and some common packages.
 
 ## Usages
--Prepare StructSeg2019 task1 data and split them into two folders: train and valid. (Each patient's CT image and label should be in a individual folder in train or valid folder) ;
+- Prepare StructSeg2019 task1 data and split them into two folders: train and valid. (Each patient's CT image and label should be in a individual folder in train or valid folder) ;
 - Preprocess the data by `data_process/Preprocess.py`;
 - Change the `data_root` in `config/train.txt` to your data root;
 - Run `Python train.py`.
