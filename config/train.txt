@@ -22,8 +22,8 @@ output_feature        = False
 overlap_num           = 8
 
 [network]
-net_type                = Unet_Separate_3
-net_name                = Unet_Separate_3
+net_type                = Unet_Separate
+net_name                = Unet_Separate
 base_feature_number     = 24
 compress_feature_number = 4
 drop_rate               = 0.5
@@ -48,4 +48,4 @@ test_step          = 100
 print_step         = 10
 model_pre_trained  = 
 model_save_prefix  = weights_center_crop/multi_thresh_1/Unet_Separate_3/Unet_Separate_3_24_ath_exp_0.5_sag
-best_dice          = 0.74
+best_dice          = 0
