@@ -12,4 +12,4 @@ Pytorch >= 1.4, SimpleITK >= 1.2, scipy >= 1.3.1, nibabel >= 2.5.0 and some comm
 - Preprocess the data by `data_process/Preprocess.py`;
 - Change the `data_root` in `config/train.txt` to your data root;
 - Run `Python train.py`.
-- Your model is saved as 'model_save_prefix' in 'config/train.txt'.
+- Your model is saved as `model_save_prefix` in `config/train.txt`.
